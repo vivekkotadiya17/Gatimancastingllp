@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS
     (function() {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        emailjs.init("user_yourPublicKey"); // User will need to replace with their actual EmailJS public key
     })();
 
     // DOM Elements
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Send email using EmailJS
-            emailjs.send('service_id', 'template_id', templateParams) // Replace with your actual service and template IDs
+            emailjs.send('service_id', 'template_id', templateParams, 'user_yourPublicKey') // Replace with your actual service and template IDs
                 .then(function(response) {
                     console.log('Email sent successfully!', response);
                     // Show success message
