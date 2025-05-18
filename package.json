@@ -1,0 +1,11 @@
+{
+  "name": "gatiman-castings",
+  "version": "1.0.0",
+  "description": "Gatiman Castings LLP Website",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 
