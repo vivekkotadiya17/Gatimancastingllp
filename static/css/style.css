@@ -1,6 +1,15 @@
 /* Custom styles for Gatiman Castings LLP - Inspired by kncasting.com */
 
 /* Base styles */
+.slide {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
 :root {
     --primary-color: #FF7F00;
     --secondary-color: #4CAF50;
@@ -23,7 +32,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.3;
 }
@@ -477,24 +491,22 @@ footer {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Back to top button */
 #back-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
     z-index: 99;
     background: var(--primary-color);
     color: white;
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -535,11 +547,11 @@ footer {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     section {
         padding: 3rem 0;
     }
-    
+
     .section-title {
         font-size: 1.75rem;
     }
@@ -549,12 +561,14 @@ footer {
     .hero-title {
         font-size: 1.75rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
-    .btn-primary, .btn-secondary, .btn-outline {
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
         padding: 0.6rem 1.2rem;
     }
 }
