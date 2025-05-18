@@ -1,0 +1,29 @@
+Gatimancastingllp
+
+Create a complete, responsive Vanilla JavaScript landing page for a casting  [ Company name = Gatimancastingllp ] using HTML, CSS, and JavaScript with Tailwind CSS via CDN, optimized for static hosting on Hostinger. The page should include the following sections, all designed to be mobile-first and responsive for mobile (sm: <576px), tablet (md: ≥768px), and desktop (lg: ≥1024px) using Tailwind breakpoints:
+
+1. **Project Structure**: Set up files for index.html, style.css, and script.js. Include a basic HTML structure linking Tailwind CSS via CDN and JavaScript for functionality.
+		Logo = i provided logo adjust that logo best way you can.
+2. **Navbar**: A sticky top bar with links to About Us, Clients, Work, and Contact Us (smooth scrolling). Use a hamburger menu on mobile (sm:), vertical stack on tablet (md:), and horizontal links on desktop (lg:). Include JavaScript for hamburger menu toggle and ARIA labels for accessibility.
+
+3. **Hero**: A full-width section with a background image placeholder, bold tagline (e.g., "Premium Iron & Aluminum Casting"), and a Contact Us button that scrolls to the contact section. Ensure large text/button on desktop (lg:), medium on tablet (md:), and smaller/stacked on mobile (sm:). [ Use dummy images for now ill replace it after some times when I get images from clients ]
+
+4. **About Us**: A section with a heading, paragraph for company description, and an optional image placeholder. Use a stacked layout on mobile (sm:), two-column layout (text left, image right) on tablet (md:) and desktop (lg:). Use Tailwind’s flex or grid system.
+
+5. **Clients**: A grid of 4–6 client logo placeholders with hover effects (e.g., scale or opacity). Ensure single-column on mobile (sm:), two-column on tablet (md:), and three-column on desktop (lg:). Use Tailwind’s grid system. [ use casting clients from google ( like dummy clients ) for now ill replace it when I get information from my client ]
+
+6. **Work**: A portfolio gallery with 6 image card placeholders and captions for casting projects (e.g., iron, aluminum, C.I. casting). Ensure single-column on mobile (sm:), two-column on tablet (md:), and three-column on desktop (lg:). Add hover effects (e.g., zoom) using Tailwind’s grid system.  [ Use dummy images for now ill replace it after some times when I get images from clients ]
+
+7. **Contact**: A section with:
+   - An email icon with a mailto: link to zoror6495@gmail.com
+   - A WhatsApp icon with a wa.me link and pre-filled message (e.g., "Hello, I’m interested in your casting services").
+   - A form with fields for full name, phone, email, subject, message, and a submit button, integrated with EmailJS (include JavaScript for EmailJS SDK via CDN, initialized with User ID, with error handling and success alerts).
+   Ensure stacked layout on mobile (sm:), wider form (e.g., 600px) on tablet (md:) and desktop (lg:). Use Tailwind’s flex and form utilities.
+
+8. **Footer**: A section with contact info (email, phone), social media link placeholders, and a copyright notice. Use centered text on mobile (sm:), multi-column layout on tablet (md:) and desktop (lg:). Style with a dark background.
+
+9. **EmailJS Integration**: Provide JavaScript code in script.js to integrate EmailJS for the contact form, handling full name, phone, email, subject, and message fields. Include CDN import, initialization, and submission logic with success/error alerts.
+
+10. **Deployment**: Include instructions to export the project as static files (index.html, style.css, script.js, and image placeholders) and upload to Hostinger’s public_html directory using File Manager or FTP. Ensure the site is optimized for fast loading (minimal file size) and verify responsiveness on mobile, tablet, and desktop.
+
+Ensure all sections use Tailwind CSS for mobile-first, responsive design with breakpoints (sm:, md:, lg:). Optimize images (e.g., max-w-full h-auto) for fast loading on Hostinger’s LiteSpeed servers and CDN. Provide clean, well-commented code with accessibility (e.g., alt text for images, ARIA for navigation). Include a note on testing responsiveness in Replit AI’s live preview.
