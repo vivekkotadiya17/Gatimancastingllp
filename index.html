@@ -8,6 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Custom CSS -->
@@ -20,13 +26,16 @@
                         'gatiman-orange': '#FF7F00',
                         'gatiman-green': '#4CAF50',
                         'gatiman-black': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans bg-slate-50 text-gray-800">
+<body class="font-poppins bg-slate-50 text-gray-800">
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 w-full bg-white shadow-md z-50 py-3 transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
@@ -73,40 +82,68 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="pt-24 pb-16 md:py-32 lg:py-40 relative bg-gray-900 text-white">
+    <section id="hero" class="pt-24 pb-16 md:py-32 lg:py-40 relative bg-gray-900 text-white overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://pixabay.com/get/g59fba2ff30b426bb570d8c14e78cf6b34e4490f675fd706a01155b29ed364fa26f6495cb3c9da917d048b125722aed60042ec01130170992a4e9afb8c2be7018_1280.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">Premium Iron & Aluminum Casting</h1>
-                <p class="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200">Molten Metals To Masterpieces</p>
-                <a href="#contact" class="inline-block bg-gatiman-orange text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-gatiman-green transition duration-300 transform hover:scale-105">Contact Us</a>
+            <div class="max-w-3xl mx-auto text-center md:text-left">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight" data-aos="fade-up">
+                    <span class="text-gatiman-orange">Premium</span> Iron & Aluminum <span class="text-gatiman-green">Casting</span>
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="100">Molten Metals To Masterpieces</p>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <a href="#contact" class="inline-block bg-gatiman-orange text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-gatiman-green transition duration-300 transform hover:scale-105 shadow-lg">
+                        <span class="mr-2">Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        <!-- Modern design element - floating shapes -->
+        <div class="hidden md:block absolute -right-16 -bottom-16 w-64 h-64 bg-gatiman-orange/20 rounded-full blur-3xl"></div>
+        <div class="hidden md:block absolute -left-16 top-32 w-48 h-48 bg-gatiman-green/20 rounded-full blur-3xl"></div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">About <span class="text-gatiman-orange">Us</span></h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-xl font-semibold mb-4 text-gatiman-green">Our Story</h3>
-                    <p class="mb-4 text-gray-700 leading-relaxed">
+    <section id="about" class="py-16 md:py-24 bg-white relative overflow-hidden">
+        <!-- Modern design element - subtle background pattern -->
+        <div class="absolute inset-0 opacity-5 bg-repeat" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23FF7F00\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4">About <span class="text-gatiman-orange">Us</span></h2>
+                <div class="w-24 h-1 bg-gatiman-green mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-6 text-gatiman-green">Our Story</h3>
+                    <p class="mb-6 text-gray-700 leading-relaxed">
                         Gatiman Castings LLP is a premier manufacturer specializing in high-quality iron and aluminum castings. With decades of experience in the industry, we have established ourselves as a trusted partner for businesses requiring precision casting components.
                     </p>
-                    <p class="mb-4 text-gray-700 leading-relaxed">
+                    <p class="mb-6 text-gray-700 leading-relaxed">
                         Our state-of-the-art facilities are equipped with the latest technology and operated by skilled craftsmen who combine traditional expertise with modern manufacturing techniques. From small intricate parts to large industrial components, we deliver castings that meet the highest standards of quality and durability.
                     </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        At Gatiman Castings, we pride ourselves on our commitment to excellence, on-time delivery, and customer satisfaction, making us the preferred choice for casting solutions across various industries.
-                    </p>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-gatiman-orange rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <p class="font-medium">Commitment to excellence in every cast</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gatiman-green rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <p class="font-medium">On-time delivery and customer satisfaction</p>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/2">
-                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                
+                <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105">
                         <img src="https://pixabay.com/get/g1f88afad2b4bed9d85f1053cd6c17bc441b8adaa8aecfee67d757c4098584b4393a2dc6bafa67491f2936836dfc883c351c29a8d426458a6f3c8e8be85bad0d7_1280.jpg" alt="Casting Manufacturing Process" class="w-full h-auto">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
-                            <div class="p-4 text-white">
-                                <span class="text-sm font-medium">Advanced casting facilities</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-6 text-white">
+                                <span class="text-lg font-medium">Advanced casting facilities</span>
                             </div>
                         </div>
                     </div>
@@ -116,54 +153,73 @@
     </section>
 
     <!-- Clients Section -->
-    <section id="clients" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">Our <span class="text-gatiman-orange">Clients</span></h2>
-            <p class="text-center text-gray-700 max-w-3xl mx-auto mb-12">
-                We are proud to work with leading companies across various industries, providing them with high-quality casting solutions that meet their specific requirements.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="clients" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden">
+        <!-- Design element - side decoration -->
+        <div class="absolute top-0 right-0 w-40 h-40 bg-gatiman-orange/10 rounded-bl-full"></div>
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-gatiman-green/10 rounded-tr-full"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4">Our <span class="text-gatiman-orange">Clients</span></h2>
+                <div class="w-24 h-1 bg-gatiman-green mx-auto mb-8"></div>
+                <p class="text-center text-gray-700 max-w-3xl mx-auto">
+                    We are proud to work with leading companies across various industries, providing them with high-quality casting solutions that meet their specific requirements.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Client 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/g3f21487a3cbec65189403f044af693945ec81c2913dfce1b2928de4f17e4f4f08f1f3fba4975d49312305adc83476d4a7bf3bb65d66652f562c44226cfb8ee51_1280.jpg" alt="Industrial Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/g3f21487a3cbec65189403f044af693945ec81c2913dfce1b2928de4f17e4f4f08f1f3fba4975d49312305adc83476d4a7bf3bb65d66652f562c44226cfb8ee51_1280.jpg" alt="Industrial Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">IndustrialTech Ltd.</h3>
+                    <h3 class="text-xl font-semibold text-center">IndustrialTech Ltd.</h3>
+                    <div class="w-12 h-1 bg-gatiman-orange mx-auto mt-4"></div>
                 </div>
+                
                 <!-- Client 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/g0726b1cf7f3948b72f0df8adbb3d8624c090a8dc29c737c363d19aaf757025fd88eb97d37bb43730baf7e66eb2c2870619693f698290fb6218426c57fb100c77_1280.jpg" alt="Manufacturing Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/g0726b1cf7f3948b72f0df8adbb3d8624c090a8dc29c737c363d19aaf757025fd88eb97d37bb43730baf7e66eb2c2870619693f698290fb6218426c57fb100c77_1280.jpg" alt="Manufacturing Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">PrecisionForge Co.</h3>
+                    <h3 class="text-xl font-semibold text-center">PrecisionForge Co.</h3>
+                    <div class="w-12 h-1 bg-gatiman-orange mx-auto mt-4"></div>
                 </div>
+                
                 <!-- Client 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/gb53d6602271f593d930c2cca9fe2471798395812827eeff8a8accd0c694db5fcb94c14711b0a74911534b8ece28e933876148700a7bea7d5bca8d037879eaad5_1280.jpg" alt="Engineering Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/gb53d6602271f593d930c2cca9fe2471798395812827eeff8a8accd0c694db5fcb94c14711b0a74911534b8ece28e933876148700a7bea7d5bca8d037879eaad5_1280.jpg" alt="Engineering Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">GlobalEngineer Inc.</h3>
+                    <h3 class="text-xl font-semibold text-center">GlobalEngineer Inc.</h3>
+                    <div class="w-12 h-1 bg-gatiman-orange mx-auto mt-4"></div>
                 </div>
+                
                 <!-- Client 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/g5ea20dbde2c94dcecfc59f81f83a3301cdb580855bdc402433f5d13dcba9f933833135308c9a8151c8a068920cd649b52a709f7f5e0015df1c5ec1f8923a3e8e_1280.jpg" alt="Automotive Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/g5ea20dbde2c94dcecfc59f81f83a3301cdb580855bdc402433f5d13dcba9f933833135308c9a8151c8a068920cd649b52a709f7f5e0015df1c5ec1f8923a3e8e_1280.jpg" alt="Automotive Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">AutoComponents Group</h3>
+                    <h3 class="text-xl font-semibold text-center">AutoComponents Group</h3>
+                    <div class="w-12 h-1 bg-gatiman-green mx-auto mt-4"></div>
                 </div>
+                
                 <!-- Client 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/g1900edc953a9ea5aa749fd94d94623c123bc4cf43f337f0d440925104b1f4bfb46b578dd38b3343851814a4412bb5521555815735400ea8e89eb3a06b8207bde_1280.jpg" alt="Machinery Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/g1900edc953a9ea5aa749fd94d94623c123bc4cf43f337f0d440925104b1f4bfb46b578dd38b3343851814a4412bb5521555815735400ea8e89eb3a06b8207bde_1280.jpg" alt="Machinery Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">MachineWorks Enterprises</h3>
+                    <h3 class="text-xl font-semibold text-center">MachineWorks Enterprises</h3>
+                    <div class="w-12 h-1 bg-gatiman-green mx-auto mt-4"></div>
                 </div>
+                
                 <!-- Client 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-                    <div class="h-24 flex items-center justify-center mb-4">
-                        <img src="https://pixabay.com/get/ge1e8065f19cd797a32abc18e25190664783f982176a3b188a00b0cf34cb6b0ded5d536d387ac340049618389169ef1a8ca9146aae185f6f043e2e93d458ab27c_1280.jpg" alt="Construction Client Logo" class="max-h-20 max-w-full">
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="h-28 flex items-center justify-center mb-6">
+                        <img src="https://pixabay.com/get/ge1e8065f19cd797a32abc18e25190664783f982176a3b188a00b0cf34cb6b0ded5d536d387ac340049618389169ef1a8ca9146aae185f6f043e2e93d458ab27c_1280.jpg" alt="Construction Client Logo" class="max-h-24 max-w-full">
                     </div>
-                    <h3 class="text-lg font-semibold text-center">BuildTech Solutions</h3>
+                    <h3 class="text-xl font-semibold text-center">BuildTech Solutions</h3>
+                    <div class="w-12 h-1 bg-gatiman-green mx-auto mt-4"></div>
                 </div>
             </div>
         </div>
@@ -326,7 +382,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-medium mb-1">WhatsApp</h4>
-                                    <a href="https://wa.me/?text=Hello,%20I'm%20interested%20in%20your%20casting%20services" target="_blank" class="text-gray-700 hover:text-gatiman-orange transition">
+                                    <a href="https://wa.me/911234567890?text=Hello,%20I'm%20interested%20in%20your%20casting%20services" target="_blank" class="text-gray-700 hover:text-gatiman-orange transition">
                                         Message us on WhatsApp
                                     </a>
                                 </div>
@@ -395,7 +451,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Company Info -->
                 <div class="text-center md:text-left">
-                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTUwIDUwIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMTAuNSAyNWMwLTggNi41LTE0LjUgMTQuNS0xNC41czE0LjUgNi41IDE0LjUgMTQuNWMwIDggLTYuNSAxNC41IC0xNC41IDE0LjVzLTE0LjUgLTYuNSAtMTQuNSAtMTQuNXoiIGZpbGw9IiNGRjdGMDAiLz4KICA8cGF0aCBkPSJNMjUgMTAuNWM4IDAgMTQuNSA2LjUgMTQuNSAxNC41YzAgOCAtNi41IDE0LjUgLTE0LjUgMTQuNXMtMTQuNSAtNi41IC0xNC41IC0xNC41YzAgLTggNi41IC0xNC41IDE0LjUgLTE0LjV6bTAgLTMuNWMtMTAgMCAtMTggOCAtMTggMThzOCAxOCAxOCAxOHMxOCAtOCAxOCAtMThzLTggLTE4IC0xOCAtMTh6IiBmaWxsPSIjNENBRjUwIi8+CiAgPHBhdGggZD0iTTI5IDI1YzAgLTIuMiAtMS44IC00IC00IC00cy00IDEuOCAtNCA0czEuOCA0IDQgNHM0IC0xLjggNCAtNHoiIGZpbGw9IiNGRjdGMDAiLz4KICA8cGF0aCBkPSJNMTggMjNjMC4zIC0wLjYgMC42IC0xLjIgMS4yIC0xLjhMMTggMThjMCAwIC0zIDIgLTQgNnoiIGZpbGw9IiM0Q0FGNTAiLz4KICA8cGF0aCBkPSJNNDEgMjQuNWwtMi41IC0xLjVsLTcuNSAtNC41djZsLTEgNWg0LjVsMSAtMWg1LjVjMCAwIDAuNSAtMS41IDAgLTR6IiBmaWxsPSIjRkY3RjAwIi8+CiAgPHBhdGggZD0iTTQyLjUgMjNDNDIuOCAyMy42IDQzIDI0LjQgNDMgMjUgNDMgMjcuMiA0MS4yIDI5IDM5IDI5TDM2IDI5QzM2IDI5IDQzIDI2LjUgNDIuNSAyM3oiIGZpbGw9IiNGRjdGMDAiLz4KICA8cGF0aCBkPSJNNTAgMTJMMzkgMTlMMzcgMjRDMzcgMjQgNDAgMTYgNTAgMTJ6IiBmaWxsPSIjNENBRjUwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2siIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGRjdGMDAiPkdBVElNQU48L3RleHQ+CiAgPHRleHQgeD0iNzAiIHk9IjQyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM0Q0FGNTAiPkNBU1RJTkdTIExMUDwvdGV4dD4KICA8cGF0aCBkPSJNMjggMTJDMjggMTIgMzAgOSAzMi41IDhDMzUgNyAzNyA2LjUgMzkgNy41QzQxIDguNSA0My41IDEwIDQzLjUgMTBDNDMuNSAxMCA0MS41IDEwLjUgNDAgMTFDMzguNSAxMS41IDM3IDEyIDM1IDEyLjVDMzMgMTMgMzEgMTMgMjkuNSAxMi44QzI4IDEyLjYgMjggMTIgMjggMTJ6IiBmaWxsPSIjNENBRjUwIi8+Cjwvc3ZnPg==" alt="Gatiman Castings LLP Logo" class="h-10 mx-auto md:mx-0 mb-4">
+                    <img src="static/images/logo.png" alt="Gatiman Castings LLP Logo" class="h-12 mx-auto md:mx-0 mb-4">
                     <p class="mb-4">
                         Gatiman Castings LLP specializes in premium iron and aluminum casting with a commitment to quality and precision.
                     </p>
